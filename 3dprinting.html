@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en";>
+ 
+<head>
+    <meta charset="UTF-8">     
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>         
+</head>
+<!---------------------------------------------------------------->
+
+
+<style>
+      @font-face {
+    font-family: 'Bitwise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bitwise'), url('https://fonts.cdnfonts.com/s/6817/bitwise.woff') format('woff');
+}   
+body{
+     background-color: black;
+     font-size: 20px;
+     font-family: 'Bitwise', sans-serif;                                        
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #14626c, 0 0 40px #14626c, 0 0 50px #14626c, 0 0 60px #14626c, 0 0 70px #14626c;
+  }
+
+  to { text-shadow: 0 0 20px #fff, 0 0 30px #24727c, 0 0 40px #24727c, 0 0 50px #24727c, 0 0 60px #24727c, 0 0 70px #24727c, 0 0 80px #24727c;
+  }
+}
+li a:hover{
+    background-color: grey  ;
+    box-shadow: 0 5px 15px grey;
+  }
+
+p{
+    color: white;
+    font-size: 28px;
+    text-align:center;
+    border: 7px outset white;
+    margin: auto;
+    width: 1000px;
+    height: 400px; 
+}
+div{
+    color: teal;
+    text-align: center;
+    font-size:55px;
+}
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 90px;
+  background-color: black;
+}
+
+
+.grid { 
+  display: grid;
+  grid-template-columns: fit-content(8ch) fit-content(8ch) 1fr;  grid-gap: 10px;
+  align-items: start;
+  justify-items: center;
+  margin: auto;
+  width: 940px;
+  }
+.grid img {
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+.grid img:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 2;
+  }
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<!-------------------------------------------------------------->
+
+<!-------------------------------------------------------------->
+    <body>
+<nav>
+    
+    <ul style="list-style:none; margin:0; padding:0; text-align:center; background-color: black;">
+
+        <li style="display: inline">           
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="index.html">Home</a>
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="skills.html">Skills
+            </a>        
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="Rakib Rary Resume.docx.pdf">Resume</a>
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="contact.html">Contact</a>
+        </li>
+      </ul>
+</nav>
+<div class="glow">
+RAKIB RARY
+</div>
+
+<br></br>
+
+<div class="grid" >
+  <img class="myImages" id="myImg" src="3dprintphotos/Placeholder.JPG" alt="lol">
+  <img class="myImages" id="myImg" src="3dprintphotos/3DPRINTS.png" alt="3D PRINTS">
+  <img class="myImages" id="myImg" src="3dprintphotos/Bunny.JPG" alt="BUNNY">
+  <img class="myImages" id="myImg" src="3dprintphotos/Deadpool.JPG" alt="DEADPOOL">
+  <img class="myImages" id="myImg" src="3dprintphotos/Orangeskull.jpg" alt="LOW-POLY SKULL">
+  <img class="myImages" id="myImg" src="3dprintphotos/Pacman.JPG" alt="PACMAN">
+  <img class="myImages" id="myImg" src="3dprintphotos/Alien.JPG" alt="ALIEN">
+  <img class="myImages" id="myImg" src="3dprintphotos/Groot.JPG" alt="GROOT">
+  <img class="myImages" id="myImg" src="3dprintphotos/Stormtrooper_skull.JPG" alt="DEATH TROOPER">
+  <img class="myImages" id="myImg" src="3dprintphotos/snoopy.JPG" alt="SNOOPY">
+  <img class="myImages" id="myImg" src="3dprintphotos/Mdp.JPG" alt="M&M+DOODLEBOB+PIKACHU">
+
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    console.log(evt);
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+<br></br>
+<br></br>
+<br></br>
+<div class = "footer">
+    <a style="text-align: center; color: white; font-size: 30px;" href="#">Contact</a>
+    <a style="text-align: center; color: white; font-size: 30px;" href="#">Blog</a>
+    <a style="text-align: center; color: white; font-size: 30px;" href="#">Socials</a>
+    <a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>  
+    </div>
+    </body> 
+</html>
