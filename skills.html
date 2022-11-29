@@ -77,10 +77,10 @@ body{
 }
 
 @keyframes glow3 {
-  from {   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange, 0 0 50px orange, 0 0 60px orange, 0 0 70px orange;
+  from { text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #008f11, 0 0 25px #008f11, 0 0 30px #008f11, 0 0 35px #008f11, 0 0 40px #008f11;
   }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px orange , 0 0 40px orange, 0 0 50px orange, 0 0 60px orange, 0 0 70px orange, 0 0 80px orange;
+
+  to { text-shadow: 0 0 25px #fff, 0 0 35px #008f11, 0 0 40px #008f11, 0 0 45px #008f11, 0 0 50px #008f11, 0 0 55px #008f11, 0 0 60px #008f11;
   }
 }
 
@@ -106,10 +106,10 @@ body{
 }
 
 @keyframes glow5 {
-  from {   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+  from {   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px orange, 0 0 40px orange, 0 0 50px orange, 0 0 60px orange, 0 0 70px orange;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px green , 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green, 0 0 80px green;
+    text-shadow: 0 0 20px #fff, 0 0 30px orange , 0 0 40px orange, 0 0 50px orange, 0 0 60px orange, 0 0 70px orange, 0 0 80px orange;
   }
 }
 .glow6 {
@@ -154,6 +154,21 @@ body{
   
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+.glow9 {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  animation: glow9 1s ease-in-out infinite alternate;
+}
+@keyframes glow9 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #C0C0C0, 0 0 40px #C0C0C0, 0 0 50px #C0C0C0, 0 0 60px #C0C0C0, 0 0 70px #C0C0C0;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #C0C0C0, 0 0 40px #C0C0C0, 0 0 50px #C0C0C0, 0 0 60px #C0C0C0, 0 0 70px #C0C0C0, 0 0 80px #C0C0C0;
   }
 }
 li a:hover{
@@ -209,51 +224,30 @@ p2{
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-
-
 </style>
-<!-------------------------------------------------------------->
-
-<!-------------------------------------------------------------->
-    <body>
-<nav>
-    
+<body>
+<nav>   
     <ul style="list-style:none; margin:0; padding:0; text-align:center; background-color: black;">
-
-        <li style="display: inline">
-
-            
+        <li style="display: inline">           
             <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="index.html">Home</a>
         </li>
-
-
         <li style="display: inline">
             <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="skills.html">Skills
-            </a>
-           
-
+            </a>          
         </li>
-
-
         <li style="display: inline">
-            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="Rakib Rary Resume.docx.pdf">Resume</a>
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="resume.html">Resume</a>
         </li>
-
-
         <li style="display: inline">
             <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="contact.html">Contact</a>
         </li>
       </ul>
 </nav>
-<!----------------------------- <img src="LOGO.jpg" alt="image file missing" class="center"/> --------------------------------->
 <div class="glow">
 RAKIB RARY
 </div>
-<!--------------------------------------------------------------->
-   
        <div1>
          <div class="button-container">
-
               <a href="Robotics.html" class="button" style="text-decoration:none">
                 <p>
                   <svg xmlns="http://www.w3.org/2000/svg"  width="100" height="100" fill="white" class="bi bi-robot" viewBox="0 0 16 16">
@@ -261,7 +255,6 @@ RAKIB RARY
                   <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z"/>
                 </svg>
               </p>
-
                <p class="glow1" style="color:white;" >ROBOTICS</p>
               </a>
 
@@ -272,9 +265,8 @@ RAKIB RARY
                   <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
                 </svg>
               </p>
-              <p class="glow2" style="color:white;">3D PRINTING</p>
+              <p class="glow9" style="color:white;">3D PRINTING</p>
               </a>
-
               <a href="coding.html" class="button" style="text-decoration:none">
                 <P>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-filetype-cs" viewBox="0 0 16 16">
@@ -283,7 +275,6 @@ RAKIB RARY
               </P>
                 <p class="glow3" style="color:white;">CODING</p>
               </a>
-
               <a href="engineering.html" class="button" style="text-decoration:none">
                 <P>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-gear" viewBox="0 0 16 16">
@@ -292,9 +283,7 @@ RAKIB RARY
                 </svg>
               </P>
               <p class="glow4" style="color:white;">ENGINEERING</p>
-
               </a>
-
               <a href="DRONES.html" class="button" style="text-decoration:none">
                 <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-airplane-engines-fill" viewBox="0 0 16 16">
@@ -313,7 +302,6 @@ RAKIB RARY
               </p>
                 <p class="glow6" style="color:white;">RC CAR</p>
               </a>
-
               <a href="PC-BUILDING.html" class="button" style="text-decoration:none">
                 <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-pc" viewBox="0 0 16 16">
@@ -322,7 +310,6 @@ RAKIB RARY
             </p>
             <p class="glow7" style="color:white;">PC BUILDING</p>
             </a>
-              
               <a href="PHOTOGRAPHY.html" class="button" style="text-decoration:none">
                 <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-camera-fill" viewBox="0 0 16 16">
@@ -332,12 +319,22 @@ RAKIB RARY
               </p>
               <p class="glow8" style="color:white;">PHOTOGRAPHY</p>
               </a>
+              
+              <a href="Archery.html" class="button" style="text-decoration:none">
+                <p>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" style="width: 105; height: 105;vertical-align: middle;fill: white;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1"><path d="M1020.586667 996.693333L887.466667 815.786667c61.44-78.506667 102.4-177.493333 102.4-286.72C989.866667 
+                  276.48 781.653333 68.266667 529.066667 68.266667 409.6 68.266667 296.96 116.053333 215.04 191.146667L204.8 180.906667V119.466667c0-3.413333-3.413333-10.24-3.413333-13.653334l-102.4-102.4C92.16 0 85.333333 0 78.506667 0c-6.826667 3.413333-10.24 10.24-10.24 17.066667V68.266667H17.066667c-6.826667 
+                  0-13.653333 3.413333-17.066667 10.24 0 6.826667 0 13.653333 3.413333 20.48l102.4 102.4c3.413333 0 10.24 3.413333 13.653334 3.413333h61.44l10.24 10.24 119.466666 119.466667 23.893334 23.893333 95.573333 95.573333 23.893333 23.893334 58.026667 58.026666c6.826667 6.826667 6.826667 17.066667 0 23.893334-3.413333 
+                  3.413333-6.826667 3.413333-13.653333 3.413333s-10.24 0-13.653334-3.413333L443.733333 518.826667v10.24c0 47.786667 37.546667 85.333333 85.333334 85.333333s85.333333-37.546667 85.333333-85.333333-37.546667-85.333333-85.333333-85.333334c-17.066667 0-34.133333 6.826667-47.786667 13.653334l-23.893333-23.893334c20.48-13.653333 
+                  44.373333-23.893333 71.68-23.893333 64.853333 0 119.466667 54.613333 119.466666 119.466667S593.92 648.533333 529.066667 648.533333 409.6 593.92 409.6 529.066667c0-13.653333 3.413333-27.306667 6.826667-40.96l-102.4-102.4C290.133333 430.08 273.066667 477.866667 273.066667 529.066667c0 139.946667 116.053333 256 256 256s256-116.053333
+                   256-256S669.013333 273.066667 529.066667 273.066667c-64.853333 0-122.88 23.893333-167.253334 64.853333l-23.893333-23.893333C389.12 266.24 453.973333 238.933333 529.066667 238.933333c160.426667 0 290.133333 129.706667 290.133333 290.133334S689.493333 819.2 529.066667 819.2 238.933333 689.493333 238.933333 529.066667c0-61.44 20.48-119.466667 
+                   51.2-163.84L170.666667 242.346667c-61.44 78.506667-102.4 177.493333-102.4 286.72s37.546667 208.213333 102.4 286.72l-133.12 180.906666c-6.826667 6.826667-3.413333 17.066667 3.413333 23.893334 3.413333 3.413333 6.826667 3.413333 10.24 3.413333 6.826667 0 10.24-3.413333 13.653333-6.826667l126.293334-174.08c85.333333 92.16 204.8 146.773333 337.92 
+                   146.773334s252.586667-58.026667 337.92-146.773334l126.293333 174.08c3.413333 3.413333 10.24 6.826667 13.653333 6.826667 3.413333 0 6.826667 0 10.24-3.413333 6.826667-6.826667 10.24-17.066667 3.413334-23.893334z" fill=""/></svg>
+              </p>
+              <p class="glow2" style="color:white;">ARCHERY</p>
+              </a>
             </div>
-       </div1>
-             
-<br></br>
-<br></br>
-<br></br>
+       </div1>  
 
 
 
@@ -346,15 +343,16 @@ RAKIB RARY
 
 
 
-
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
        <div class = "footer">
-        <a style="text-align: center; color: white; font-size: 30px;" href="#">Contact</a>
-        <a style="text-align: center; color: white; font-size: 30px;" href="#">Blog</a>
-        <a style="text-align: center; color: white; font-size: 30px;" href="#">Socials</a>
-        <a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>
-        
-        </div>
-        
-
-        </body>
-        </html>
+       <a style="text-align: center; color: white; font-size: 30px;" href="contact.html">Contact</a>
+       <a style="text-align: center; color: white; font-size: 30px;" href="Blog.html">Blog</a>
+       <a style="text-align: center; color: white; font-size: 30px;" href="Social.html">Socials</a>
+       <a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>
+       <a style="text-align: center; color: white; font-size: 30px;" href="https://github.com/RakibRary">Github</a>
+       </div>
+       </body> 
+       </html>

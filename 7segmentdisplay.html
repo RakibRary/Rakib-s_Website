@@ -2,7 +2,7 @@
 <html lang="en";>
 <head> <meta charset="UTF-8"> </head>
 <style>
- @font-face {
+      @font-face {
     font-family: 'Bitwise';
     font-style: normal;
     font-weight: 400;
@@ -26,10 +26,10 @@ body{
   animation: glow 1s ease-in-out infinite alternate;
 }
 @keyframes glow {
-  from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #14626c, 0 0 40px #14626c, 0 0 50px #14626c, 0 0 60px #14626c, 0 0 70px #14626c;
+  from {   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
   }
-
-  to { text-shadow: 0 0 20px #fff, 0 0 30px #24727c, 0 0 40px #24727c, 0 0 50px #24727c, 0 0 60px #24727c, 0 0 70px #24727c, 0 0 80px #24727c;
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px blue , 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
   }
 }
 li a:hover{
@@ -40,9 +40,13 @@ p{
     color: white;
     font-size: 28px;
     text-align:center;
+    border: 7px outset white;
     margin: auto;
-    width: 900px;
-    height: 500px; 
+    width: 1100px;
+    height: 400px; 
+    background-color: #222222;
+    padding:5px;
+    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
 }
 div{
     color: teal;
@@ -58,8 +62,8 @@ div{
   background-color: black;
 }
 </style>
-    <body>
-<nav>   
+<body>
+<nav>
     <ul style="list-style:none; margin:0; padding:0; text-align:center; background-color: black;">
         <li style="display: inline">           
             <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="index.html">Home</a>
@@ -76,19 +80,29 @@ div{
         </li>
       </ul>
 </nav>
+
 <div class="glow">
 RAKIB RARY
 </div>
-<img src="mainimage.JPG" alt="image file missing" class="center" style="width: 1400px;height:400px;"/>
+<br></br>
+<br></br>
 <p>
+    <p1 >
+        <img src="engineeringphotos/4digit7seg.JPG" alt="image file missing" style="width: 550px;height:400px;" align="left" />
+    </p1>
+<p1>
+        <br></br>
+        <a style="color:white; font-size: 42px; text-decoration:none; " href="#">4 Digit 7 Segment Display</a>
+        <br></br>
+    </p1>
+<p1 style="height:50px; width:50px; font-size: 20px; font-family: 'Courier New', Courier, monospace;">  
     <br></br>
-    Hello, my name is Rakib. Born and raised in Queens, New York City, I learned a lot about who I am as a person growing up. 
-    Now a rising senior at CUNY Queens College, I'm pursuing a B.S. in computer science. My interests are in the S.T.E.M. field; 
-    coding, robotics, 3d/resin printing, drones, and engineering are of particular interest to me. Teaching has always been a passion 
-    of mine! I was able to help children succeed in math and S.T.E.M. while tutoring/teaching students from elementary school through highschool.
-    Currently, My goal as a Community Mediation Services employee is to assist students in discovering similar interests and passions as me. Also, 
-    allows me to assist the students in the Far Rockaway Community that are less fortunate. 
+    Schematic:
+    <a href="#" target="_blank" style="color:#fff">CLICK HERE</a>
     <br></br>
+    Code:
+    <a href="#" target="_blank" style="color:#fff">CLICK HERE</a>
+     </p1>
 </p>
 <br></br>
 <br></br>
