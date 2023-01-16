@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en";>
+<head>
+    <link rel="stylesheet" href="prism.css">
+</head>
+<style>
+    @font-face {
+    font-family: 'Bitwise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bitwise'), url('https://fonts.cdnfonts.com/s/6817/bitwise.woff') format('woff');
+}   
+body{
+     background-color: black;
+     font-size: 20px;
+     font-family: 'Bitwise', sans-serif;                                        
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #008f11, 0 0 25px #008f11, 0 0 30px #008f11, 0 0 35px #008f11, 0 0 40px #008f11;
+  }
+
+  to { text-shadow: 0 0 25px #fff, 0 0 35px #008f11, 0 0 40px #008f11, 0 0 45px #008f11, 0 0 50px #008f11, 0 0 55px #008f11, 0 0 60px #008f11;
+  }
+}
+li a:hover{
+    background-color: grey  ;
+    box-shadow: 0 5px 15px grey;
+  }
+  p{
+    color: white;
+    font-size: 28px;
+    text-align:center;
+    border: 7px outset white;
+    margin: auto;
+    width:800px;
+    height: 300px; 
+    background-color: #222222;
+    padding:5px;
+    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+}
+div{
+    color: teal;
+    text-align: center;
+    font-size:55px;
+}
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 90px;
+  background-color: black;
+}
+pre {
+  float: left;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+</style>
+<body>
+<nav>
+    <ul style="list-style:none; margin:0; padding:0; text-align:center; background-color: black;">
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="index.html">Home</a>
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="skills.html">Skills
+            </a>   
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="resume.html">Resume</a>
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="contact.html">Contact</a>
+        </li>
+      </ul>
+</nav>
+<div class="glow">
+  RAKIB RARY
+  </div>
+<br></br>
+
+
+<pre class="language-html" style="font-size:16px; width:55%;" > 
+    <code>
+    //  ViewController.swift  
+    //  IntroduceStudent      
+    //  Created by Rakib Rary on 1/11/23.  
+    import UIKit       
+    class ViewController: UIViewController {    
+    @IBOutlet weak var morePetsSwitch: UISwitch!       
+    @IBOutlet weak var morePetsStepper: UIStepper!  
+    @IBOutlet weak var firstNameTextField: UITextField!  
+    @IBOutlet weak var lastNameTextField: UITextField!   
+    @IBOutlet weak var schoolNameTextField: UITextField!       
+    @IBOutlet weak var yearSegmentedControl: UISegmentedControl!      
+    @IBOutlet weak var numberOfPetsLabel: UILabel!       
+    override func viewDidLoad() {   
+        super.viewDidLoad()    
+        // Do any additional setup after loading the view.
+    }       
+    @IBAction func stepperDidChange(_ sender: UIStepper) {
+            numberOfPetsLabel.text = "\(Int(sender.value))"
+    }      
+    @IBAction func introduceSelfDidTapped(_ sender: UIButton) {     
+            // Lets us choose the title we have selected from the segmented control       
+            // In our example that is whether it is first, second, third or forth        
+            let year = yearSegmentedControl.titleForSegment(at: yearSegmentedControl.selectedSegmentIndex)       
+            // Creating a constant of type string that holds an introduction. The introduction receives 
+            the values from the outlet connections.let introduction = "My name is \(firstNameTextField.text!) 
+            \(lastNameTextField.text!) and I attend \(schoolNameTextField.text!).I am currently in my \(year!) 
+            year and I own \(numberOfPetsLabel.text!) dogs.It is \(morePetsSwitch.isOn) that I want more pets."      
+            print(introduction)        
+        }      
+    @IBAction func IntroduceSelfDidTapped(_ sender: UIButton) {    
+            // Let's us chose the title we have selected from the segmented control       
+            let year = yearSegmentedControl.titleForSegment(at: yearSegmentedControl.selectedSegmentIndex)       
+            // Creating a variable of type string, that holds an introduction. The introduction 
+            interpolates the values from the text fields provided.
+            // Currently we can only present the information in a print statement. However, 
+            this lets us verify that our app is printing out what is intended!
+            let introduction = "My name is \(firstNameTextField.text!) \(lastNameTextField.text!) 
+            and I attend \(schoolNameTextField.text!).
+            I am currently in my \(year!) year and I own \(numberOfPetsLabel.text!) cat. 
+            It is 
+            \(morePetsSwitch.isOn) that I want more pets."      
+            // Creates the alert where we pass in our message, which our introduction.       
+            let alertController = UIAlertController(title: "My Introduction", message: introduction, preferredStyle: .alert)      
+            // A way to dismiss the box once it pops up       
+            let action = UIAlertAction(title: "Nice to meet you!", style: .default, handler: nil)       
+            // Passing this action to the alert controller so it can be dismissed
+            alertController.addAction(action)
+            present(alertController, animated: true, completion: nil)       
+        }
+    }
+
+
+
+    </code>
+</pre>
+
+<div style="color:#fff">TEST</div>
+<img src="coding/IOSAPP_GIF.gif" style="display: block; margin: auto; width:30%; padding-top:10px; " alt="">
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<div class = "footer">
+<a style="text-align: center; color: white; font-size: 30px;" href="contact.html">Contact</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="Blog.html">Blog</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="Social.html">Socials</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="https://github.com/RakibRary">Github</a>
+</div>
+<script scr="prism.js"></script>
+</body> 
+</html>

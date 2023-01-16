@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en";>
+<head>
+    <link rel="stylesheet" href="prism.css">
+</head>
+<style>
+    @font-face {
+    font-family: 'Bitwise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bitwise'), url('https://fonts.cdnfonts.com/s/6817/bitwise.woff') format('woff');
+}   
+body{
+     background-color: black;
+     font-size: 20px;
+     font-family: 'Bitwise', sans-serif;                                        
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #008f11, 0 0 25px #008f11, 0 0 30px #008f11, 0 0 35px #008f11, 0 0 40px #008f11;
+  }
+
+  to { text-shadow: 0 0 25px #fff, 0 0 35px #008f11, 0 0 40px #008f11, 0 0 45px #008f11, 0 0 50px #008f11, 0 0 55px #008f11, 0 0 60px #008f11;
+  }
+}
+li a:hover{
+    background-color: grey  ;
+    box-shadow: 0 5px 15px grey;
+  }
+  p{
+    color: white;
+    font-size: 28px;
+    text-align:center;
+    border: 7px outset white;
+    margin: auto;
+    width:800px;
+    height: 300px; 
+    background-color: #222222;
+    padding:5px;
+    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+}
+div{
+    color: teal;
+    text-align: center;
+    font-size:55px;
+}
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 90px;
+  background-color: black;
+}
+pre {
+  float: left;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+</style>
+<body>
+<nav>
+    <ul style="list-style:none; margin:0; padding:0; text-align:center; background-color: black;">
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="index.html">Home</a>
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="skills.html">Skills
+            </a>   
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="resume.html">Resume</a>
+        </li>
+        <li style="display: inline">
+            <a style= "display:inline-block; padding:10px; color: white; text-align: center; padding: 14px 16px; text-decoration:none;" href="contact.html">Contact</a>
+        </li>
+      </ul>
+</nav>
+<div class="glow">
+  RAKIB RARY
+  </div>
+<br></br>
+
+
+<pre class="language-python" > 
+    <code>
+        import cv2
+        # Load the cascade classifier for detecting faces
+        face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+        # Set up the webcam
+        cap = cv2.VideoCapture(0)
+        while True:
+            # Read the frame from the webcam
+            _, frame = cap.read()
+            # Convert the frame to grayscale
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            # Detect faces in the frame
+            faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+            # Draw a rectangle around the detected faces
+            for (x, y, w, h) in faces:
+                cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+            # Display the resulting frame
+            cv2.imshow("Facial Recognition", frame)
+            # Break the loop if the user presses 'q'
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        # Release the webcam
+        cap.release()
+    </code>
+</pre>
+
+<img src="coding/imageFaceTest.jpg" style="display: block; margin: auto; padding-top:80px;" alt="">
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<div style="color:#fff">TEST 1</div>
+<img src="coding/test1.jpg" style="display: block; margin: auto; padding-top: 10px;" alt="">
+<img src="coding/test2.jpg" style="display: block; margin: auto;" alt="">
+<br></br>
+<div style="color:#fff">TEST 2</div>
+<img src="coding/gridtest.jpg" style="display: block; margin: auto;" alt="">
+<br></br>
+<br></br>
+<p style="font-size:24px; font-family: 'Courier New', Courier, monospace;"> 
+  The facial recognition project initially evaluates various haarcascade files to 
+  identify specific objects within images. During the first test, various methods 
+  of image preprocessing are examined, such as dilation, blurring, canny, erosion, 
+  and conversion to grayscale, to facilitate image comparison. In the second test, 
+  manual adjustments to the image's hue, saturation, and value (HSV) are explored to 
+  gain a deeper understanding of how to manipulate images for improved detection.
+</p>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<div class = "footer">
+<a style="text-align: center; color: white; font-size: 30px;" href="contact.html">Contact</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="Blog.html">Blog</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="Social.html">Socials</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>
+<a style="text-align: center; color: white; font-size: 30px;" href="https://github.com/RakibRary">Github</a>
+</div>
+<script scr="prism.js"></script>
+</body> 
+</html>

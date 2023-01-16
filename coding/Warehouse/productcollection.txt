@@ -1,0 +1,7 @@
+APPLE
+BANANA
+CARROT
+COOKIE
+ICE CREAM
+pizza
+cookie
