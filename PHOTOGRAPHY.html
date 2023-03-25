@@ -1,69 +1,163 @@
 <!DOCTYPE html>
-<html lang="en";>
-<head> <meta charset="UTF-8"> </head>
+<html lang="en">
+<head> 
+      <meta charset="UTF-8"> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>  
+</head>
 <style>
       @font-face {
-    font-family: 'Bitwise';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Bitwise'), url('https://fonts.cdnfonts.com/s/6817/bitwise.woff') format('woff');
-}   
-body{
-     background-color: black;
-     font-size: 20px;
-     font-family: 'Bitwise', sans-serif;                                        
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+      font-family: 'Bitwise';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Bitwise'), url('https://fonts.cdnfonts.com/s/6817/bitwise.woff') format('woff');
+        
+
+  }   
+  body{
+      background-color: black;
+      font-size: 20px;
+      font-family: 'Bitwise', sans-serif;                                        
   }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
-}
-li a:hover{
-    background-color: grey  ;
-    box-shadow: 0 5px 15px grey;
-  }
-p{
-    color: white;
-    font-size: 28px;
-    text-align:center;
-    border: 7px outset white;
-    margin: auto;
-    width: 1000px;
-    height: 400px; 
-}
-div{
-    color: teal;
+  .glow {
+    font-size: 80px;
+    color: #fff;
     text-align: center;
-    font-size:55px;
-}
-.footer {
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  height: 90px;
-  background-color: black;
-}
-img {
-  border: 5px solid #555;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  li a:hover{
+      background-color: grey  ;
+      box-shadow: 0 5px 15px grey;
+    }
+  p{
+      color: white;
+      font-size: 28px;
+      text-align:center;
+      border: 7px outset white;
+      margin: auto;
+      width: 1000px;
+      height: 400px; 
+  }
+  div{
+      color: teal;
+      text-align: center;
+      font-size:55px;
+  }
+  .footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 90px;
+    background-color: black;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally */
+    max-height: 100vh;
+  }
+    .cards img {
+      margin: 10px;
+      border: 5px solid #555;
+      box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+      max-width: 23vw;
+    }
+    #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
 </style>
 <body>
 <nav> 
@@ -87,31 +181,71 @@ img {
 RAKIB RARY
 </div>
 
+<div class="cards">
+            <img class="myImages" id="myImg" src="canonphotos/IMG_0000.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_2342.JPG" alt="" class="center" />
+            <img class="myImages" id="myImg" src="canonphotos/IMG_2343.JPG" alt="" class="center" />
+            <img class="myImages" id="myImg" src="canonphotos/IMG_2444.JPG" alt="" class="center" />
+            <img class="myImages" id="myImg" src="canonphotos/IMG_2416.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_3337.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_0516.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_0541.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_0556.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_1012.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_1031.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_1035.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/IMG_1059.JPG" alt="" class="center"/>
+            <img class="myImages" id="myImg" src="canonphotos/Butterfly.JPG" alt="" class="center"/>
+</div>
 
-<img src="canonphotos/IMG_0000.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_2342.JPG" alt="image file missing" class="center" />
-<img src="canonphotos/IMG_2343.JPG" alt="image file missing" class="center" />
-<img src="canonphotos/IMG_2444.JPG" alt="image file missing" class="center" />
-<img src="canonphotos/IMG_2416.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_3337.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_0516.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_0541.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_0556.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_1012.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_1031.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_1035.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/IMG_1059.JPG" alt="image file missing" class="center"/>
-<img src="canonphotos/Butterfly.JPG" alt="image file missing" class="center"/>
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+          var modal = document.getElementById('myModal');
+          var images = document.getElementsByClassName('myImages');
+          var modalImg = document.getElementById("img01");
+          var captionText = document.getElementById("caption");
+          for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            img.onclick = function(evt) {
+              console.log(evt);
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+          }
+          var span = document.getElementsByClassName("close")[0];
+          span.onclick = function() {
+            modal.style.display = "none";
+          }
+</script>
+
+
+
+<br></br>
+<br></br>
 <br></br>
 <br></br>
 <br></br>
 <br></br>
 <div class = "footer">
-<a style="text-align: center; color: white; font-size: 30px;" href="contact.html">Contact</a>
-<a style="text-align: center; color: white; font-size: 30px;" href="Blog.html">Blog</a>
-<a style="text-align: center; color: white; font-size: 30px;" href="Social.html">Socials</a>
-<a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>
-<a style="text-align: center; color: white; font-size: 30px;" href="https://github.com/RakibRary">Github</a>
+          <a style="text-align: center; color: white; font-size: 30px;" href="contact.html">Contact</a>
+          <a style="text-align: center; color: white; font-size: 30px;" href="Blog.html">Blog</a>
+          <a style="text-align: center; color: white; font-size: 30px;" href="Social.html">Socials</a>
+          <a style="text-align: center; color: white; font-size: 30px;" href="https://www.linkedin.com/in/rakib-rary-07291a16b/">Linkedin</a>
+          <a style="text-align: center; color: white; font-size: 30px;" href="https://github.com/RakibRary">Github</a>
 </div>
 </body> 
 </html>
