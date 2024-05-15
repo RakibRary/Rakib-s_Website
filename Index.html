@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black:
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 10%;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .animated-text {
+            font-family: 'Nixie One', sans-serif;
+            font-size: 1000%;
+        }
+
+
+        #introduction p {
+            margin-top: 20px;
+        }
+
+
+        img.framed_black {
+            box-shadow:
+                -50px -50px 0 -40px var(--black),
+                50px 50px 0 -40px var(--black);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-wrapper {
+            text-align: center;
+        }
+
+        .note {
+            background-color: #FFc000;
+            padding: 1.5em;
+            margin-top: 20px;
+            margin-left: 40px;
+            font-size: large;
+            line-height: 1.6;
+            width: 30%;
+            min-height: 300px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+        .certificates-container {
+            background-color: black;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            gap: 20px;
+            margin: auto;
+        }
+
+        .certificates-container img {
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .expanded img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .images-and-button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            /* Align items at the top */
+        }
+
+
+        .image-container {
+            flex: 0 0 35%;
+            padding: 10px;
+        }
+
+
+        .button-container {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-54 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-54:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .button-54 {
+                padding: 0.25em 0.75em;
+            }
+        }
+
+        .button-container_top {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .robot-emoji {
+            font-size: 1200%;
+        }
+
+        .robot-and-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .talk-bubble {
+            margin: 40px;
+            display: inline-block;
+            position: relative;
+            width: 400px;
+            height: auto;
+            background-color: lightyellow;
+        }
+
+        .border {
+            border: 8px solid #666;
+        }
+
+        .talktext {
+            padding: 1em;
+            text-align: left;
+            line-height: 1.5em;
+            font-size: large;
+        }
+
+        .talktext p {
+            -webkit-margin-before: 0em;
+            -webkit-margin-after: 0em;
+        }
+
+        .tri-right.border.right-in:before {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -25px;
+            /* Adjusted to -40px to point towards the left */
+            right: auto;
+            /* Reset to auto */
+            top: 45%;
+            /* Adjusted to center vertically */
+            transform: translateY(-50%) rotate(-45deg);
+            /* Rotated the point */
+            border: 20px solid;
+            border-color: transparent transparent transparent #666;
+            /* Adjusted border-color */
+        }
+
+        .tri-right.right-in:after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -10px;
+            /* Adjusted to -20px to point towards the left */
+            right: auto;
+            /* Reset to auto */
+            top: 49%;
+            /* Adjusted to center vertically */
+            transform: translateY(-50%) rotate(-45deg);
+            /* Rotated the point */
+            border: 12px solid;
+            border-color: transparent transparent transparent lightyellow;
+            /* Adjusted border-color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container_top" style="margin: 0 auto;font-size:x-large">
+        <a href="Index.html"><button class="button-54" role="button">Home</button></a>
+        <a href="Projects.html"><button class="button-54" role="button">Projects</button></a>
+        <a href="Resume.html"><button class="button-54" role="button">Resume/cv</button></a>
+        <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
+    </div>
+    <br><br>
+
+
+    <div class="container">
+        <div class="animated-text" id="welcome-text">Rakib Rary</div>
+
+        <div class="container">
+            <div class="robot-and-text">
+                <p><span class="robot-emoji">🤖</span></p>
+
+                <audio id="myAudio" src="Moby the robot beep sound effect.mp3"></audio>
+
+
+                <div class="talk-bubble tri-right border right-in">
+                    <div class="talktext">
+                        <p>Hi, my name is Rakib Rary, an IT professional with a diverse background
+                            in electrical engineering, computer science, and a current focus
+                            on Information Systems. Leveraging my expertise, I aim to deliver
+                            innovative solutions and drive technological advancements. Explore my journey below:
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <button id="playButton" onclick="playSound()" class="button-54" role="button">PRESS ME</button>
+        </div>
+
+
+        <br><br>
+
+
+        <div class="image-container">
+            <img class="framed_black" src="Index_Images/IMG_5320.JPG" alt="image file missing" class="center"
+                style="max-width: 40%; height: auto;">
+            <div class="note">
+                <strong>PC PARTS LIST</strong> <br>
+                CPU: AMD RYZEN 5600X<br>CPU Cooler: NZXT Kraken x73 360mm<br>Motherboard: MSI MEG X570 ACE
+                <br>Storage:2X Samsung 860 EVO<br> Ram:G.Skill Tridentz 32GB(4X8GB)<br>GPU: GIGABYTE RTX3080<br>
+                Case: Phanteks Eclipse P600S <br>Power Supply: EVGA SuperNOVA 850W<br>Operating System: Windows 10
+                <br>Monitor:2X Dell 27 Gaming Monitor S2721DGF<br>Fans: Corsair LL series 120 mm<br>Additional Storage:
+                Samsung 980 Pro M.2<br>
+            </div>
+        </div>
+
+        <br><br>
+        <br><br>
+
+        <div class="image-container">
+            <img class="framed_black" src="Index_Images/raspicover.JPG" alt="image file missing" class="center"
+                style="max-width: 40%; height: auto;">
+            <div class="note">
+                <strong>Note:</strong> Your note text here.
+            </div>
+        </div>
+
+        <br><br>
+        <br><br>
+
+        <div class="image-container">
+            <img class="framed_black" src="Index_Images/Engineering.JPG" alt="image file missing" class="center"
+                style="max-width: 40%; height: auto;">
+            <div class="note">
+                <strong>Note:</strong> Your note text here.
+            </div>
+        </div>
+        <br><br>
+        <br><br>
+        <br><br>
+
+
+        <img class="framed_black" src="Index_Images/Robotarm.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+        <img class="framed_black" src="Index_Images/RoboCop.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+        <img class="framed_black" src="Index_Images/optimusprime.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+        <img src="Index_Images/3drobot.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+
+        <a href="3D_Printing.html"><button style="padding-bottom: 1%;position: relative; top: -10%;" class="button-54"
+                role="button">CHECK OUT MORE
+                3D PRINTS!!!</button></a>
+
+        <br><br>
+        <br><br>
+
+        <img class="framed_black" src="Image_Gallery/DJI_0246.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+        <img class="framed_black" src="Image_Gallery/DJI_0257.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+        <img class="framed_black" src="Image_Gallery/DJI_0276.JPG" alt="image file missing" class="center"
+            style="max-width: 35%; height: 25%; padding:30px;">
+        <br><br>
+        <br><br>
+
+        <a href="Gallery.html"><button class="button-54" role="button">IMAGE GALLERY</button></a>
+
+
+        <br><br>
+        <br><br>
+        <br><br>
+
+        <div class="certificates-container">
+            <div class="image-container">
+                <img class="expandable" src="Certificates/Comptia ITF+.png" alt="Comptia ITF+ Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+            <div class="image-container">
+                <img class="expandable" src="Certificates/Google IT Support.png" alt="Google IT Support Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+            <div class="image-container">
+                <img class="expandable" src="Certificates/KBCC COMPLETION CERTIFICATE.jpg"
+                    alt="KBCC Completion Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+            <div class="image-container">
+                <img class="expandable" src="Certificates/Tech Consulting.jpg" alt="Tech Consulting Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+            <div class="image-container">
+                <img class="expandable" src="Certificates/Android Forensics.jpg" alt="Android Forensics Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+            <div class="image-container">
+                <img class="expandable" src="Certificates/Advanced Forensics.jpg" alt="Advanced Forensics Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+            <div class="image-container">
+                <img class="expandable" src="Certificates/Npower Qooper Mentor.jpg"
+                    alt="Advanced Forensics Certificate">
+                <span class="close-btn">Close</span>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+    <br><br>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var text = document.getElementById('welcome-text').innerHTML;
+            var textElement = document.getElementById('welcome-text');
+            textElement.innerHTML = '';
+            var i = 0;
+            var speed = 150;
+            function typeWriter() {
+                if (i < text.length) {
+                    textElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const expandableImages = document.querySelectorAll('.expandable');
+
+            expandableImages.forEach(img => {
+                img.addEventListener('click', function () {
+                    this.parentNode.classList.toggle('expanded');
+                });
+            });
+
+            const closeButtons = document.querySelectorAll('.close-btn');
+
+            closeButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    this.parentNode.classList.remove('expanded');
+                });
+            });
+        });
+
+
+        function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+
+
+        function showText() {
+            var text = "Hi, my name is Rakib Rary, an IT professional with a diverse background in electrical engineering, computer science, and a current focus on Information Systems. Leveraging my expertise, I aim to deliver innovative solutions and drive technological advancements. Explore my journey below:";
+            var words = text.split(" ");
+            var index = 0;
+            var interval = setInterval(function () {
+                document.getElementById("pressMeText").innerText += words[index] + " ";
+                index++;
+                if (index >= words.length) {
+                    clearInterval(interval);
+                }
+            }, 200); // Adjust the interval (in milliseconds) to control the speed of text display
+        }
+    </script>
+</body>
+
+</html>

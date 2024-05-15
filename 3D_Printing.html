@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 10%;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .animated-text {
+            font-family: 'Nixie One', sans-serif;
+            font-size: 1000%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-54 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-54:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .button-54 {
+                padding: 0.25em 0.75em;
+            }
+        }
+
+        .button-container_top {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+
+
+        .myImages {
+            max-width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border: 5px solid #000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            /* Add cursor pointer to indicate clickable */
+            transition: transform 0.3s ease;
+            /* Add transition for smooth animation */
+        }
+
+        .myImages.expanded {
+            transform: scale(1.5);
+            /* Scale the image when expanded */
+        }
+
+        .welcome-image {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            opacity: 0;
+            animation: popUp 1s ease forwards;
+        }
+
+        @keyframes popUp {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes popUp {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container_top" style="margin: 0 auto;font-size:x-large">
+        <a href="Index.html"><button class="button-54" role="button">Home</button></a>
+        <a href="Projects.html"><button class="button-54" role="button">Projects</button></a>
+        <a href="Resume.html"><button class="button-54" role="button">Resume/cv</button></a>
+        <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
+    </div>
+
+    <div>
+        <div class="animated-text" id="welcome-text">3D PRINTING</div>
+        <br><br>
+
+        <div class="welcome-image">
+            <img style="width:70%; height:50%; display: block; margin: auto;" class="myImages" id="myImg"
+                src="3dprintphotos/3DPRINTS.png" alt="3D PRINTS">
+        </div>
+        <div class="image-grid">
+            <img class="myImages" id="myImg" src="3dprintphotos/Mdp.jpg" alt="M&M+DOODLEBOB+PIKACHU">
+            <img class="myImages" id="myImg" src="3dprintphotos/Deadpool.jpg" alt="DEADPOOL">
+            <img class="myImages" id="myImg" src="3dprintphotos/Orangeskull.jpg" alt="LOW-POLY SKULL">
+            <img class="myImages" id="myImg" src="3dprintphotos/Alien.jpg" alt="ALIEN">
+            <img class="myImages" id="myImg" src="3dprintphotos/Groot.jpg" alt="GROOT">
+            <img class="myImages" id="myImg" src="3dprintphotos/Baby_Yoda.JPG" alt="BABY YODA">
+            <img class="myImages" id="myImg" src="3dprintphotos/Bunny.JPG" alt="BUNNY">
+            <img class="myImages" id="myImg" src="3dprintphotos/IMG_6547.JPG" alt="CERATOSAURUS">
+            <img class="myImages" id="myImg" src="3dprintphotos/Stormtrooper_skull.JPG" alt="DEATH TROOPER">
+            <img class="myImages" id="myImg" src="3dprintphotos/Charizard.JPG" alt="CHARIZARD">
+            <img class="myImages" id="myImg" src="3dprintphotos/Google_dinosaur.png" alt="GOOGLE DINOSAUR">
+            <img class="myImages" id="myImg" src="3dprintphotos/bearwheart.JPG" alt="BEAR W/ HEART">
+            <img class="myImages" id="myImg" src="3dprintphotos/Star.JPG" alt="MARIO STAR">
+            <img class="myImages" id="myImg" src="3dprintphotos/Bulbasaur.JPG" alt="BULBASAUR">
+            <img class="myImages" id="myImg" src="3dprintphotos/Scratchblocks.JPG" alt="SCRATCH BLOCKS">
+            <img class="myImages" id="myImg" src="3dprintphotos/masterchief.JPG" alt="MASTER CHIEF">
+            <img class="myImages" id="myImg" src="3dprintphotos/low-poly_yoda.JPG" alt="LOW POLY YODA">
+            <img class="myImages" id="myImg" src="3dprintphotos/angrycalibrationcube.JPG" alt="ANGRY CALIBRATION CUBE">
+            <img class="myImages" id="myImg" src="3dprintphotos/Cool Duck.JPG" alt="COOL DUCK">
+            <img class="myImages" id="myImg" src="3dprintphotos/doodleBob.JPG" alt="DOODLEBOB">
+            <img class="myImages" id="myImg" src="3dprintphotos/Pacman.jpg" alt="PACMAN">
+
+        </div>
+
+        <div class="image-grid">
+            <img class="myImages" id="myImg" src="3dprintphotos/thinking man.JPG" alt="THINKING MAN">
+            <img class="myImages" id="myImg" src="3dprintphotos/optimusprime.JPG" alt="Optimus Prime">
+            <img class="myImages" id="myImg" src="3dprintphotos/kaws.JPG" alt="KAWS">
+            <img class="myImages" id="myImg" src="3dprintphotos/snoopy.JPG" alt="SNOOPY">
+            <img class="myImages" id="myImg" src="3dprintphotos/moaistatue.JPG" alt="MOAI STATUE">
+            <img class="myImages" id="myImg" src="3dprintphotos/tiki.JPG" alt="STONY GURGHIS W/ TIKI">
+            <img class="myImages" id="myImg" src="3dprintphotos/dog.JPG" alt="DOG">
+            <img class="myImages" id="myImg" src="3dprintphotos/Darthvader.JPG" alt="DARTHVADER">
+            <img class="myImages" id="myImg" src="3dprintphotos/hulk.JPG" alt="HULK">
+            <img class="myImages" id="myImg" src="3dprintphotos/Trophie.JPG" alt="TROPHIE">
+            <img class="myImages" id="myImg" src="3dprintphotos/Alien_Xenomorph.JPG" alt="XENOMORPH">
+            <img class="myImages" id="myImg" src="3dprintphotos/Robotarm.JPG" alt="3D PRINTED ROBOT ARM">
+            <img class="myImages" id="myImg" src="3dprintphotos/grim reaper.JPG" alt="GRIM REAPER">
+            <img class="myImages" id="myImg" src="3dprintphotos/RoboCop.JPG" alt="ROBOCOP">
+            <img class="myImages" id="myImg" src="3dprintphotos/3drobot.JPG" alt="3D ROBOT">
+            <img class="myImages" id="myImg" src="3dprintphotos/mooncity.JPG" alt="MOON CITY">
+            <img class="myImages" id="myImg" src="3dprintphotos/Thehand2.JPG" alt="THING ~ WEDNESDAY">
+            <img class="myImages" id="myImg" src="3dprintphotos/Thehand.JPG" alt="THING ~ WEDNESDAY">
+            <img class="myImages" id="myImg" src="3dprintphotos/ninjaturtle.JPG" alt="NINJA TURTLE">
+            <img class="myImages" id="myImg" src="3dprintphotos/Captainamerica.JPG" alt="CAPTAIN AMERICA">
+            <img class="myImages" id="myImg" src="3dprintphotos/christmaslights.JPG" alt="CHRISTMAS LIGHTS">
+            <img class="myImages" id="myImg" src="3dprintphotos/gnome.JPG" alt="GNOME">
+            <img class="myImages" id="myImg" src="3dprintphotos/Sackboy.JPG" alt="SACKBOY">
+            <img class="myImages" id="myImg" src="3dprintphotos/astronaut.JPG" alt="ASTRONAUT W/ MOON">
+        </div>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var text = document.getElementById('welcome-text').innerHTML;
+            var textElement = document.getElementById('welcome-text');
+            textElement.innerHTML = '';
+            var i = 0;
+            var speed = 150;
+            function typeWriter() {
+                if (i < text.length) {
+                    textElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+        });
+    
+        const images = document.querySelectorAll('.myImages');
+    
+        images.forEach((image, index) => {
+            setTimeout(() => {
+                image.style.opacity = '1';
+            }, (index + 1) * 500);
+        });
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll('.myImages');
+    
+            images.forEach((image) => {
+                image.addEventListener('click', function () {
+                    // Remove 'expanded' class from all images
+                    images.forEach((img) => {
+                        if (img !== image) {
+                            img.classList.remove('expanded');
+                        }
+                    });
+                    // Toggle 'expanded' class for the clicked image
+                    this.classList.toggle('expanded');
+                });
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>

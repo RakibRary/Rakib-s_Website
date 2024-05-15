@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 5%;
+            /* Adjusted padding-top */
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .button-container {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-54 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-54:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            .button-54 {
+                padding: 0.25em 0.75em;
+            }
+        }
+
+        .button-container_top {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .resume-container {
+            height: 1115px;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+            padding: 40px;
+        }
+
+        .resume-section {
+            margin-bottom: 20px;
+        }
+
+        .resume-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .resume-section p {
+            margin: 0;
+        }
+
+        .animated-text {
+            font-family: 'Nixie One', sans-serif;
+            font-size: 900%;
+            display: flex;
+            align-items: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container_top" style="margin: 0 auto;font-size:x-large">
+        <a href="Index.html"><button class="button-54" role="button">Home</button></a>
+        <a href="Projects.html"><button class="button-54" role="button">Projects</button></a>
+        <a href="Resume.html"><button class="button-54" role="button">Resume/cv</button></a>
+        <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
+    </div>
+    <div style="padding-top: 3%;">
+        <div class="resume-container" id="resume-page1">
+            <div class="animated-text" id="welcome-text">Rakib Rary</div>
+
+            <div class="resume-section">
+                <h2>Personal Information</h2>
+                <p>New York, NY | (347) 553-7713 | <a href="mailto:raryrakib@gmail.com">raryrakib@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/rakibrary">www.linkedin.com/in/rakibrary</a></p>
+                <p>Website: <a href="https://rakibrary.com/">https://rakibrary.com/</a></p>
+                <p>GitHub: <a href="https://github.com/RakibRary">https://github.com/RakibRary</a></p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Professional Summary</h2>
+                <p>Experienced IT specialist with a comprehensive understanding of hardware, software, and networking,
+                    currently pursuing CompTIA ITF+, A+, and Network+ certifications to elevate existing skills.
+                    Possessing 2 years of prior experience as a level 1 technician, I am committed to further refining
+                    my expertise through hands-on practice and continuous learning.</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Education</h2>
+                <p>Bachelor of Science, Information Systems - In Progress</p>
+                <p>City University of New York School of Professional Studies</p>
+                <p>Bachelor of Arts, Urban Studies, Computer Science Minor - June 2023</p>
+                <p>Queens College, City University of New York</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Certifications</h2>
+                <p>Google IT Support Professional Certificate - March 2024</p>
+                <p>CompTIA ITF Certification - April 2024</p>
+                <p>CompTIA A+ Certification - In Progress</p>
+                <p>CompTIA Network+ Certification - In Progress</p>
+                <p>Drone FAA Recreation License - April 2023</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Technical Skills</h2>
+                <p>Hardware: Laptops, Desktops, Mobile (iPhone, Android), printers</p>
+                <p>Software: Virtual PC, Microsoft Office</p>
+                <p>Virtualization: Virtual Box</p>
+                <p>Maintenance: Operating system installation, Installing anti-virus, Disk defragmenter, Firewall
+                    settings, system restoration</p>
+                <p>Additional Skills: Preventative maintenance, technical research, drive partitioning, driver updates,
+                    OS installation/imaging, anti-malware installation and removal, PC building</p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Professional Experience</h2>
+                <p>Level 1 Technician | American Info System - January 2022 - Present</p>
+                <ul>
+                    <li>Utilize ticketing systems (ServiceNow) to track all IT services which included moving, adding,
+                        changing, and decommissioning computer systems for clients based on information provided on
+                        ticket.</li>
+                    <li>Successfully serviced over 100 computers per day.</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="resume-container" id="resume-page2" style="display: none;">
+            <div class="resume-section">
+                <li>Performed quality Assurance, installation of software, disconnect/reconnect, and providing
+                    support for other necessities.</li>
+                <li>Collaboratively and efficiently works in teams in need of client projects.</li>
+
+                <h2>After-School Assistant Director | Community Mediation Services - March 2023 - Present</h2>
+                <ul>
+                    <li>Successfully supervise after-school program operations, ensuring compliance with implementation
+                        and funding/department mandates, resulting in improved outcomes and increased stakeholder
+                        satisfaction, with a 60% increase in registrations.</li>
+                    <li>Performed all technical troubleshooting for three after-school programs, including printer
+                        issues, software installations, and computer repairs.</li>
+                    <li>Develop and maintain an academically rich, positive, and healthy environment for students,
+                        incorporating youth development principles, resulting in a 20% increase in daily school
+                        attendance, a 13% improvement in academic grades, heightened satisfaction in career path
+                        exploration, and overwhelmingly positive after school feedback.</li>
+                    <li>Researched and presented to management on prospective technical advancements for the program,
+                        including computers, laptops, 3D printers, laser engravers, hydroponic systems, and drones.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h2>STEM & Math Educator | Community Mediation Services - January 2022 - March 2023</h2>
+                <ul>
+                    <li>Responsible for creating and teaching daily/weekly lesson plans for 70-90 students on STEM
+                        topics such as 3D/resin printing, laser engraving, RC cars, drones, electrical circuit design,
+                        coding, solar panels, virtual reality, and other scientific instruments.</li>
+                    <li>Instructed mathematics curriculum to 6th, 7th, and 8th graders, supported in homework, exams,
+                        and quizzes daily.</li>
+                    <li>Performed daily administrative tasks, outreach, company video presentations, and social media.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h2>Robotics Researcher | RoboMindTech - June 2022 - August 2022</h2>
+                <ul>
+                    <li>Participated in a robotics research lab gaining an understanding of physics, mechanics, and
+                        electrical concepts.</li>
+                    <li>Utilized coding to understand how to program robots and automation.</li>
+                    <li>Created PowerPoints, schematics, and technical manuals for different projects.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h2>Intern, NYC Department of Transportation Office of Emergency Response - July 2021 - August 2021</h2>
+                <ul>
+                    <li>Researched mitigation projects managed within DOT.</li>
+                    <li>Collaborated with the Office of Emergency Response Admin Team to ensure that all data was
+                        accurate, and that projects were running as they should.</li>
+                    <li>Assisted the Emergency Response unit with citywide projects in the office/field. Data entry,
+                        verifying, and updating file information.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h2>Technical and Professional Development</h2>
+                <p>Technology Fundamentals Program, NPower - Brooklyn, NY (February 2024 – Present)</p>
+                <ul>
+                    <li>Selected to participate in an intensive 20-week CompTIA technical and professional development
+                        training program.</li>
+                    <li>Hardware & Software Troubleshooting: Learned to identify and resolve hardware issues, including
+                        desktops, laptops, printers, and peripherals. Demonstrated ability to provide support for
+                        various operating systems (Windows, Linux, MacOS) and applications.</li>
+                    <li>Networking: Built knowledge of basic networking concepts, protocols, and troubleshooting
+                        techniques.</li>
+                    <li>System Maintenance: Practiced routine system maintenance tasks, such as updates, patches, and
+                        backups.</li>
+                    <li>Remote Desktop Support: Gained experience in providing remote assistance to end-users for
+                        problem resolution.</li>
+                    <li>Professional Development: Participated in specialized workshops and networking events
+                        facilitated by seasoned professionals at companies such as Accenture, BNY Melon, Google, and
+                        Bloomberg. Attended coaching sessions and attend ongoing mentorship meetings with members of the
+                        IT teams at several Fortune 500 companies.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-container" id="resume-page3" style="display: none;">
+            <div class="resume-section">
+                <h2>CompTIA Network+ Course</h2>
+                <p>CUNY Kingsborough Community College (January 2024 - May 2024)</p>
+                <ul>
+                    <li>14-week CompTIA Network+ course, earning certification in TestOut, Network Pro and CompTIA
+                        Network+, and enhancing essential network principles and protocols for IT industry roles.</li>
+                    <li>Acquired comprehensive knowledge and practical skills in essential network principles,
+                        protocols, and technologies, empowering readiness for diverse IT industry roles.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h2>Participant | Family Development Credential for Leaders</h2>
+                <p>(October 2023 - January 2023)</p>
+                <ul>
+                    <li>Awarded competitive scholarship for a 42-hour empowerment-based leadership program.</li>
+                    <li>Developed and demonstrated leadership and communication skills through a successful portfolio,
+                        earning a Leadership Credential.</li>
+                </ul>
+            </div>
+
+            <div class="resume-section">
+                <h2>Mentee | Google Software Engineering Program</h2>
+                <p>(September 2022 - January 2023)</p>
+                <ul>
+                    <li>Chosen to participate in a 10-week intensive workshop with a 1:1 mentorship from Google Software
+                        Engineering to further develop problem-solving and technical interviewing skills.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-container" style="text-align: center; margin-top: 20px;">
+            <button class="button-54" onclick="showPrevPage()">Previous Page</button>
+            <button class="button-54" onclick="showNextPage()">Next Page</button>
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+    </div>
+    </div>
+  
+    <script>
+
+        function toggleResume() {
+            var page1 = document.getElementById('resume-page1');
+            var page2 = document.getElementById('resume-page2');
+
+            if (page1.style.display === 'block') {
+                page1.style.display = 'none';
+                page2.style.display = 'block';
+            } else {
+                page1.style.display = 'block';
+                page2.style.display = 'none';
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var text = document.getElementById('welcome-text').innerHTML;
+            var textElement = document.getElementById('welcome-text');
+            textElement.innerHTML = '';
+            var i = 0;
+            var speed = 150;
+            function typeWriter() {
+                if (i < text.length) {
+                    textElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+        });
+
+
+        var currentPage = 1;
+        var maxPages = 3;
+
+        function showPage(pageNumber) {
+            for (var i = 1; i <= maxPages; i++) {
+                var page = document.getElementById('resume-page' + i);
+                if (i === pageNumber) {
+                    page.style.display = 'block';
+                } else {
+                    page.style.display = 'none';
+                }
+            }
+            currentPage = pageNumber;
+        }
+
+        function showNextPage() {
+            if (currentPage < maxPages) {
+                showPage(currentPage + 1);
+            }
+        }
+
+        function showPrevPage() {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+        }
+
+        // Initially show the first page
+        showPage(1);
+    </script>
+</body>
+
+</html>
