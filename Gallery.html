@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -69,8 +72,6 @@
             height: 100%;
             object-fit: cover;
         }
-
-       
     </style>
 </head>
 
@@ -80,11 +81,19 @@
         <a href="Projects.html"><button class="button-54" role="button">Projects</button></a>
         <a href="Resume.html"><button class="button-54" role="button">Resume/cv</button></a>
         <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
+        <button id="music-button" class="button-54" role="button"><i class="fas fa-music"></i></button>
+
     </div>
 
     <div id="image-container">
         <img id="gallery-image" src="Image_Gallery/DJI_0246.JPG">
     </div>
+
+    <audio id="myAudio" src="Instrumental.mp3"></audio>
+    <div style="font-family: 'Courier New', Courier, monospace; font-weight: 450; font-style: italic; font-size: 400%; padding-top: 10%; justify-content: center; text-align: center;"
+        id="welcome-message">Enjoy the image gallery!<br>Dont forget to press the music button on top!</div>
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -124,6 +133,45 @@
             }
             setInterval(changeImage, 2900);
         });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var audio = document.getElementById("myAudio");
+            var musicButton = document.getElementById("music-button");
+
+            musicButton.addEventListener("click", function () {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            });
+
+
+
+
+
+            function showWelcomeMessage() {
+                var welcomeMessage = document.getElementById("welcome-message");
+                welcomeMessage.style.opacity = "1";
+            }
+
+            // Function to hide the welcome message
+            function hideWelcomeMessage() {
+                var welcomeMessage = document.getElementById("welcome-message");
+                welcomeMessage.style.opacity = "0";
+            }
+
+            // Call the showWelcomeMessage function when the page loads
+            showWelcomeMessage();
+
+            // Call the hideWelcomeMessage function after 3 seconds (3000 milliseconds)
+            setTimeout(hideWelcomeMessage, 3000);
+        });
+
+
+
+
     </script>
 
 </body>
