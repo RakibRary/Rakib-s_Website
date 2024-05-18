@@ -21,13 +21,6 @@
             height: 100vh;
         }
 
-        .button-container {
-            flex-basis: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
         .button-54 {
             font-family: "Open Sans", sans-serif;
             font-size: 16px;
@@ -43,6 +36,8 @@
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
+            margin: 0 3px; /* Add this line to create space between the buttons */
+
         }
 
         .button-54:active {
@@ -62,7 +57,13 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
+
 
         .resume-container {
             height: 1115px;
