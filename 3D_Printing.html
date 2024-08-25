@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,57 +23,6 @@
             height: 100vh;
         }
 
-        .animated-text {
-            font-family: 'Nixie One', sans-serif;
-            font-size: 1000%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .button-54 {
-            font-family: "Open Sans", sans-serif;
-            font-size: 16px;
-            letter-spacing: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #000;
-            cursor: pointer;
-            border: 3px solid;
-            padding: 0.25em 0.5em;
-            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-            position: relative;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            margin: 0 3px; /* Add this line to create space between the buttons */
-
-        }
-
-        .button-54:active {
-            box-shadow: 0px 0px 0px 0px;
-            top: 5px;
-            left: 5px;
-        }
-
-        @media (min-width: 768px) {
-            .button-54 {
-                padding: 0.25em 0.75em;
-            }
-        }
-
-        .button-container_top {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-
 
         .image-grid {
             display: grid;
@@ -81,7 +32,6 @@
             margin-top: 20px;
             padding: 0 10%;
         }
-
 
         .myImages {
             max-width: 100%;
@@ -194,7 +144,7 @@
             <img class="myImages" id="myImg" src="3dprintphotos/doodleBob.JPG" alt="DOODLEBOB">
             <img class="myImages" id="myImg" src="3dprintphotos/mario.JPG" alt="ASTRONAUT W/ MOON">
 
-            
+
 
         </div>
 
@@ -229,7 +179,7 @@
 
         </div>
     </div>
-  
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -247,18 +197,18 @@
             }
             typeWriter();
         });
-    
+
         const images = document.querySelectorAll('.myImages');
-    
+
         images.forEach((image, index) => {
             setTimeout(() => {
                 image.style.opacity = '1';
             }, (index + 1) * 500);
         });
-    
+
         document.addEventListener("DOMContentLoaded", function () {
             const images = document.querySelectorAll('.myImages');
-    
+
             images.forEach((image) => {
                 image.addEventListener('click', function () {
                     // Remove 'expanded' class from all images
@@ -273,7 +223,7 @@
             });
         });
     </script>
-    
+
 
 </body>
 

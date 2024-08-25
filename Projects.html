@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -18,63 +20,6 @@
             display: flex;
             justify-content: center;
             height: 100vh;
-        }
-
-        .button-54 {
-            font-family: "Open Sans", sans-serif;
-            font-size: 16px;
-            letter-spacing: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #000;
-            cursor: pointer;
-            border: 3px solid;
-            padding: 0.25em 0.5em;
-            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-            position: relative;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-            margin: 0 3px; /* Add this line to create space between the buttons */
-
-        }
-
-        .button-54:active {
-            box-shadow: 0px 0px 0px 0px;
-            top: 5px;
-            left: 5px;
-        }
-
-        @media (min-width: 768px) {
-            .button-54 {
-                padding: 0.25em 0.75em;
-            }
-        }
-
-        .button-container_top {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-
-
-        .animated-text {
-            font-family: 'Nixie One', sans-serif;
-            font-size: 1000%;
-        }
-
-        .animated-text {
-            font-family: 'Nixie One', sans-serif;
-            font-size: 1000%;
-            display: flex;
-            align-items: top;
-            justify-content: center;
         }
 
         .table-container {
@@ -90,7 +35,6 @@
             border: 2px solid #333;
         }
 
-        th,
         td {
             padding: 10px;
             text-align: left;
@@ -109,33 +53,21 @@
             border-bottom: 1px solid #333;
         }
 
+
         .grid-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            max-width: 1000px;
+            gap: 10px;
+            max-width: 100%;
             margin: 20px auto;
-            justify-content: center;
-        }
-
-        @keyframes pop-up {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            padding: 0 10%;
         }
 
         .grid-item {
             background-color: #f8f8f8;
             border: 2px solid #333;
-            height: 300px;
-            width: 300px;
-            opacity: 15%;
-            animation: pop-up 0.5s ease forwards;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
             position: relative;
         }
 
@@ -147,12 +79,28 @@
             cursor: pointer;
         }
 
-        .grid-item img.expanded {
-            transform: scale(2);
-            border: 5px solid black;
-            position: absolute;
-            top: 0;
-            left: 0;
+        @media (max-width: 1200px) {
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -177,13 +125,14 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>OFFICE 365 LAB</td>
-                        <td><button class="button-54" role="button">Press Me</button></td>
-                    </tr>
-                    <tr>
                         <td>TICKETING SYSTEM</td>
                         <td><button class="button-54" role="button">Press Me</button></td>
                     </tr>
+                    <tr>
+                        <td>OFFICE 365 LAB</td>
+                        <td><button class="button-54" role="button">Press Me</button></td>
+                    </tr>
+
                     <tr>
                         <td>Active Directory</td>
                         <td><button class="button-54" role="button">Press Me</button></td>
@@ -194,6 +143,22 @@
                     </tr>
                     <tr>
                         <td>Troubleshooting Printers</td>
+                        <td><button class="button-54" role="button">Press Me</button></td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems installation</td>
+                        <td><button class="button-54" role="button">Press Me</button></td>
+                    </tr>
+                    <tr>
+                        <td>Disk Fragmenter</td>
+                        <td><button class="button-54" role="button">Press Me</button></td>
+                    </tr>
+                    <tr>
+                        <td>Firewall Settings</td>
+                        <td><button class="button-54" role="button">Press Me</button></td>
+                    </tr>
+                    <tr>
+                        <td>System Restoration</td>
                         <td><button class="button-54" role="button">Press Me</button></td>
                     </tr>
                 </tbody>
@@ -221,34 +186,14 @@
             <div class="grid-item"><img src="engineeringphotos/scorekeeper.JPG" alt="Image 1"></div>
             <div class="grid-item"><img src="engineeringphotos/temp_hum.JPG" alt="Image 1"></div>
             <div class="grid-item"><img src="engineeringphotos/ultrasound.JPG" alt="Image 1"></div>
+            <div class="grid-item"><img src="engineeringphotos/IMG_5069 (2).JPG" alt="Image 1"></div>
+            <div class="grid-item"><img src="engineeringphotos/IMG_5141 (2).JPG" alt="Image 1"></div>
+            <div class="grid-item"><img src="engineeringphotos/raspicomponents.JPG" alt="Image 1"></div>
+            <div class="grid-item"><img src="engineeringphotos/raspicover.JPG" alt="Image 1"></div>
+
         </div>
+
     </div>
-
-    <script>
-        document.querySelectorAll('.grid-item img').forEach(img => {
-            img.addEventListener('click', () => {
-                const currentlyExpanded = document.querySelector('.grid-item img.expanded');
-                if (currentlyExpanded && currentlyExpanded !== img) {
-                    currentlyExpanded.classList.remove('expanded');
-                    currentlyExpanded.parentElement.style.zIndex = 'auto';
-                }
-                img.classList.toggle('expanded');
-                img.parentElement.style.zIndex = '2'; // Ensure the expanded image is on top
-            });
-        });
-
-        function applyRandomDelay() {
-            const gridItems = document.querySelectorAll('.grid-item');
-            gridItems.forEach(item => {
-                const randomDelay = Math.random() * 5; // Delay between 0 and 2 seconds
-                item.style.animationDelay = `${randomDelay}s`;
-            });
-        }
-
-        window.onload = applyRandomDelay;
-
-    </script>
-
 </body>
 
 </html>
