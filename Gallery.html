@@ -1,143 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css"> 
-
+    <link rel="stylesheet" href="css/styles.css">
 
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
-            overflow: hidden;
-            position: relative;
-        }
-       
-        #image-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             height: 100%;
-            z-index: -1;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        #gallery-image {
+        body {
+            scroll-snap-type: y mandatory;
+        }
+
+        .section {
+            height: 100vh; 
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            scroll-snap-align: start; 
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .section:nth-child(1) {
+            background-image: url(Image_Gallery/IMG_3337.JPG); 
+        }
+
+        .section:nth-child(2) {
+            background-image: url(Image_Gallery/DJI002.JPG); 
+        }
+
+        .section:nth-child(3) {
+            background-image: url(Image_Gallery/DJI_0463.JPG); 
+        }
+
+        .section:nth-child(4) {
+            background-image: url(Image_Gallery/DJI_0335.JPG); 
+        }
+        .section:nth-child(5) {
+            background-image: url(Image_Gallery/DJI_0246.JPG); 
+        }
+        .section:nth-child(6) {
+            background-image: url(Image_Gallery/DJI003.JPG); 
+        }
+        .section:nth-child(7) {
+            background-image: url(Image_Gallery/DJI_0276.JPG); 
+        }
+        .section:nth-child(8) {
+            background-image: url(Image_Gallery/DJI_0284.JPG); 
+        }
+        .section:nth-child(9) {
+            background-image: url(Image_Gallery/IMG_4446.JPG); 
+        }
+        .section:nth-child(10) {
+            background-image: url(Image_Gallery/DJI001.JPG); 
+        }
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-
 <body>
-    <div class="button-container_top" style="margin: 0 auto;font-size:x-large">
-        <a href="index.html"><button class="button-54" role="button">Home</button></a>
-        <a href="Projects.html"><button class="button-54" role="button">Projects</button></a>
-        <a href="Resume.html"><button class="button-54" role="button">Resume/cv</button></a>
-        <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
-        <button id="music-button" class="button-54" role="button"><i class="fas fa-music"></i></button>
+    
 
+    <div class="section">
+        <div class="button-container_top" style="margin: 0 auto;font-size:x-large">
+            <a href="Index.html"><button class="button-54" role="button">Home</button></a>
+            <a href="Projects.html"><button class="button-54" role="button">Projects</button></a>
+            <a href="Resume.html"><button class="button-54" role="button">Resume/cv</button></a>
+            <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
+        </div>
     </div>
 
-    <div id="image-container">
-        <img id="gallery-image" src="Image_Gallery/DJI_0246.JPG">
-    </div>
+    <div class="section"></div>
 
-    <audio id="myAudio" src="Instrumental.mp3"></audio>
-    <div style="font-family: 'Courier New', Courier, monospace; font-weight: 450; font-style: italic; font-size: 400%; padding-top: 10%; justify-content: center; text-align: center;"
-        id="welcome-message">Enjoy the image gallery!<br>Dont forget to press the music button on top!</div>
+    <div class="section"></div>
 
-
-
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var images = [
-                "Image_Gallery/DJI_0246.JPG",
-                "Image_Gallery/DJI_0257.JPG",
-                "Image_Gallery/DJI_0276.JPG",
-                "Image_Gallery/DJI_0180.JPG",
-                "Image_Gallery/DJI_0263.JPG",
-                "Image_Gallery/DJI_0284.JPG",
-                "Image_Gallery/DJI_0335.JPG",
-                "Image_Gallery/DJI_0463.JPG",
-                "Image_Gallery/IMG_4446.JPG",
-                "Image_Gallery/DJI_0180.JPG",
-                "Image_Gallery/IMG_0000.JPG",
-                "Image_Gallery/IMG_0516.JPG",
-                "Image_Gallery/IMG_0541.JPG",
-                "Image_Gallery/IMG_0556.JPG",
-                "Image_Gallery/IMG_1012.JPG",
-                "Image_Gallery/IMG_1014.JPG",
-                "Image_Gallery/IMG_1031.JPG",
-                "Image_Gallery/IMG_1035.JPG",
-                "Image_Gallery/IMG_1059.JPG",
-                "Image_Gallery/IMG_2342.JPG",
-                "Image_Gallery/IMG_2343.JPG",
-                "Image_Gallery/IMG_2416.JPG",
-                "Image_Gallery/IMG_2444.JPG",
-                "Image_Gallery/IMG_3337.JPG"
-            ];
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
 
-            var index = 0;
-            var imgElement = document.getElementById('gallery-image');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.5 });
 
-            function changeImage() {
-                imgElement.src = images[index];
-                index = (index + 1) % images.length;
-            }
-            setInterval(changeImage, 2900);
-        });
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            var audio = document.getElementById("myAudio");
-            var musicButton = document.getElementById("music-button");
-
-            musicButton.addEventListener("click", function () {
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                    audio.pause();
-                }
+            sections.forEach(section => {
+                observer.observe(section);
             });
-
-
-
-
-
-            function showWelcomeMessage() {
-                var welcomeMessage = document.getElementById("welcome-message");
-                welcomeMessage.style.opacity = "1";
-            }
-
-            // Function to hide the welcome message
-            function hideWelcomeMessage() {
-                var welcomeMessage = document.getElementById("welcome-message");
-                welcomeMessage.style.opacity = "0";
-            }
-
-            // Call the showWelcomeMessage function when the page loads
-            showWelcomeMessage();
-
-            // Call the hideWelcomeMessage function after 3 seconds (3000 milliseconds)
-            setTimeout(hideWelcomeMessage, 3000);
         });
-
-
-
-
     </script>
 
 </body>
-
 </html>
