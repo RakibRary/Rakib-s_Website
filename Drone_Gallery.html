@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .intro-section {
+            background-color: black !important;
+            background-image: none !important;
+        }
+
+        .intro-text {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Nixie One', cursive;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            scroll-snap-type: y mandatory;
+        }
+
+        .section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            scroll-snap-align: start;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .section:nth-child(1) {
+            background-image: url(Image_Gallery/IMG_3337.JPG);
+        }
+
+        .section:nth-child(2) {
+            background-image: url(Image_Gallery/DJI002.JPG);
+        }
+
+        .section:nth-child(3) {
+            background-image: url(Image_Gallery/DJI_0463.JPG);
+        }
+
+        .section:nth-child(4) {
+            background-image: url(Image_Gallery/DJI_0335.JPG);
+        }
+
+        .section:nth-child(5) {
+            background-image: url(Image_Gallery/DJI_0246.JPG);
+        }
+
+        .section:nth-child(6) {
+            background-image: url(Image_Gallery/DJI003.JPG);
+        }
+
+        .section:nth-child(7) {
+            background-image: url(Image_Gallery/DJI_0276.JPG);
+        }
+
+        .section:nth-child(8) {
+            background-image: url(Image_Gallery/DJI_0284.JPG);
+        }
+
+        .section:nth-child(9) {
+            background-image: url(Image_Gallery/IMG_4446.JPG);
+        }
+
+        .section:nth-child(10) {
+            background-image: url(Image_Gallery/DJI001.JPG);
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="section intro-section">
+        <div class="intro-text">Scroll down with your mouse ↓</div>
+    </div>
+
+    <div class="section">
+        <div class="button-container_top" style="margin: 0 auto;font-size:x-large">
+            <a href="index.html"><button class="button-54" role="button">Home</button></a>
+            <a href="Projects.html"><button class="button-54" role="button">Skills</button></a>
+            <a href="Resume.html"><button class="button-54" role="button">Resume</button></a>
+            <a href="Contact.html"><button class="button-54" role="button">Contact</button></a>
+        </div>
+    </div>
+
+    
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+        <div class="button-container">
+            <a href="index.html"><button class="button-54" role="button">←</button></a>
+        </div>
+    </div>
+    <div class="section">
+         <div class="button-container">
+        <a href="index.html"><button class="button-54" role="button">←</button></a>
+    </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
