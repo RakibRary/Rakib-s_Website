@@ -45,12 +45,8 @@
 .animated-text {
     font-family: 'Nixie One', sans-serif;
     font-size: 1000%;
-}
-
-.animated-text {
-    font-family: 'Nixie One', sans-serif;
-    font-size: 1000%;
     display: flex;
     align-items: top;
     justify-content: center;
 }
+
