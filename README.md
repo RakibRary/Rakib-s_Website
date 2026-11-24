@@ -1,47 +1,113 @@
-# rakibrary.com — new site
+<div align="center">
 
-A plain HTML/CSS/JS site. It doesn't need a build step and works on GitHub Pages.
+# Rakib Rary
+
+**IT Operations & Services Lead · Microsoft 365 · ITSM Automation**
+
+New York, NY
+
+[![Website](https://img.shields.io/badge/Website-rakibrary.com-1D4ED8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rakibrary.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rakibrary-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rakibrary)
+[![Email](https://img.shields.io/badge/Email-raryrakib%40gmail.com-0B1220?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raryrakib@gmail.com)
+[![Résumé](https://img.shields.io/badge/Résumé-PDF-344054?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://rakibrary.com/assets/Rakib_Rary_Resume.pdf)
+
+<a href="https://rakibrary.com"><img src="assets/img/site-preview.jpg" alt="Preview of rakibrary.com" width="900"></a>
+
+</div>
+
+---
+
+## About me
+
+I'm an **IT Operations & Services Lead at ThinkTech IT**, a managed service provider in New York. I lead a team of 10 technicians and own the company's largest client account, and I work with our CTO and VP of IT Operations on operations strategy and the automation roadmap.
+
+I've worked every layer of support. I started as a field technician servicing 100+ machines a day, moved into enterprise support at Puig, and joined ThinkTech as a Systems Engineer handling Microsoft 365, Entra ID and Intune across 20+ client companies. I went from engineer to operations leadership in under two years.
+
+**Some numbers:**
+
+| | |
+|---|---|
+| 👥 **10** | technicians I lead, hire and develop |
+| 🎫 **3,000+** | Zendesk tickets a month on the largest client account I own |
+| 📦 **1,000+** | device shipments a month, with 30+ devices shipped daily |
+| 📈 **20%** | increase in per-technician ticket resolution through weekly coaching |
+| ⏱️ **50%** | shorter new-technician onboarding after the training system I built |
+| 💰 **~20%** | cut in monthly wireless costs from a carrier usage audit at Puig |
+
+## What I work with
+
+| Area | Tools |
+|---|---|
+| **Leadership & Operations** | Team management, hiring & coaching, vendor management, procurement & logistics, SLA/KPI reporting |
+| **ITSM & Documentation** | Zendesk (workflow & automation design), ServiceNow, Atera, Jira Service Desk, IT Glue |
+| **Microsoft & Endpoint** | Microsoft 365, Entra ID, Intune, Conditional Access, Exchange Online, Active Directory, Apple Business Manager, Google Workspace |
+| **Infrastructure & Automation** | VPN, firewalls, Azure Virtual Desktop, REST API integrations, C#/.NET |
+
+## Featured work
+
+- **Zendesk workflow redesign:** rebuilt automations, triggers, views, macros and forms from ticket and form-usage data to standardize support across the team.
+- **Integrations and automation:** connected Zendesk with FedEx, Asset Panda, Microsoft 365 and HR systems for automated shipping labels and onboarding/offboarding.
+- **Knowledge base migration:** moved the knowledge base off MyGlue with an API-driven migration.
+- **Side projects:** an RFID access system, Raspberry Pi home security, a 3D-printed robot arm, 48 3D prints and FAA-certified drone photography.
+
+See all of it at **[rakibrary.com/projects](https://rakibrary.com/projects.html)**.
+
+## Education & certifications
+
+- 🎓 **B.S. Information Systems, Summa Cum Laude**, CUNY School of Professional Studies (2025)
+- 🎓 **B.A. Urban Studies, Computer Science minor**, CUNY Queens College (2023)
+- ✅ Google IT Support Professional Certificate (2024)
+- ✅ Belkasoft Windows Digital Forensics (2025)
+- ⏳ CompTIA Network+ (expected January 2027)
+- ⏳ CompTIA Security+ (expected December 2027)
+
+---
+
+## About this repository
+
+This repo holds the source for **[rakibrary.com](https://rakibrary.com)**, a hand-built portfolio site with no frameworks and no build step, hosted on GitHub Pages.
+
+**Built with:** semantic HTML, modern CSS (grid, flexbox, custom properties) and a small vanilla JavaScript file.
+
+**Features**
+- Responsive layout with a collapsible mobile menu
+- Filterable project gallery
+- Click-to-enlarge viewer for certificates and photos, built on the native `<dialog>` element
+- Accessible markup: skip link, keyboard focus styles, alt text and reduced-motion support
+- Optimized images (resized to 1600px, ~100–300 KB each) with lazy loading
+- Open Graph tags for clean link previews on LinkedIn and Slack
 
 ```
-new-site/
 ├── index.html            Home
-├── about.html            About & Experience (replaces Resume.html)
-├── projects.html         IT labs + embedded builds
-├── certifications.html   Roadmap + certificates (click to enlarge)
-├── maker.html            3D prints, drone, photography, PC build
-├── contact.html          Contact links + form
+├── about.html            Experience, education and toolkit
+├── projects.html         Operations work, IT labs, hardware builds
+├── certifications.html   Roadmap and certificates
+├── maker.html            3D prints, drone and photography, PC build
+├── contact.html          Contact links and form
 ├── 404.html
 ├── css/style.css
-├── js/main.js            Mobile menu, project filters, image viewer
-├── assets/
-│   ├── favicon.svg
-│   ├── img/              ← filled in by move-images.sh
-│   └── Rakib_Rary_Resume.pdf   ← made from your old résumé page; replace with your latest
-└── move-images.sh
+├── js/main.js
+└── assets/
+    ├── Rakib_Rary_Resume.pdf
+    └── img/              projects · certs · prints · drone · photos
 ```
 
-## 1. Copy your images in
+**Run it locally**
 
 ```bash
-bash ~/Desktop/Rakib-s_Website-main/new-site/move-images.sh
+git clone https://github.com/RakibRary/Rakib-s_Website.git
+cd Rakib-s_Website
+open index.html        # or: python3 -m http.server 8000
 ```
 
-This copies, renames and resizes the images to 1600px. Your original folders stay as they are.
+Pushing to `main` deploys to rakibrary.com through GitHub Pages. The `CNAME` file keeps the custom domain connected.
 
-## 2. Add the missing pieces
+---
 
-- `assets/Rakib_Rary_Resume.pdf`: a working version is included; replace it with your newest résumé (keep the same file name)
-- Headshot (optional): save it as `assets/img/headshot.jpg`, then in `index.html` change `assets/img/projects/robot-arm.jpg` (in the hero) to `assets/img/headshot.jpg`
-- `contact.html`: replace `YOUR_FORM_ID` with a free form ID from formspree.io
-- `certifications.html`: replace each `href="#"` on "Verify credential" with its Credly or verification link
-- `certifications.html`: fill in the target dates for A+ and Network+
+<div align="center">
 
-## 3. Preview
+**Open to IT operations and service delivery leadership roles in New York City and remote.**
 
-```bash
-open ~/Desktop/Rakib-s_Website-main/new-site/index.html
-```
+[Get in touch](https://rakibrary.com/contact.html) · [Download résumé](https://rakibrary.com/assets/Rakib_Rary_Resume.pdf)
 
-## 4. Go live (replace the old site)
-
-Copy everything inside `new-site/` into your GitHub repo's root, replacing the old pages, and push. Keep the `CNAME` file so rakibrary.com still works.
+</div>
