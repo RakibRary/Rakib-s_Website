@@ -21,7 +21,7 @@ New York, NY
 
 I'm an **IT Operations & Services Lead at ThinkTech IT**, a managed service provider in New York. I lead a team of 10 technicians and own the company's largest client account, and I work with our CTO and VP of IT Operations on operations strategy and the automation roadmap.
 
-I've worked every layer of support. I started as a field technician servicing 100+ machines a day, moved into enterprise support at Puig, and joined ThinkTech as a Systems Engineer handling Microsoft 365, Entra ID and Intune across 20+ client companies. I went from engineer to operations leadership in under two years.
+I grew from hands-on technician to operations lead through continuous upskilling in systems engineering, computer science and AI. At ThinkTech I consistently ranked #1 in weekly ticket closures as a Systems Engineer, then moved to Team Lead and, within 3 months, to IT Operations & Services Lead. Along the way I built automations that turned manual, repetitive work into scalable processes.
 
 **Some numbers:**
 
@@ -29,25 +29,27 @@ I've worked every layer of support. I started as a field technician servicing 10
 |---|---|
 | 👥 **10** | technicians I lead, hire and develop |
 | 🎫 **3,000+** | Zendesk tickets a month on the largest client account I own |
-| 📦 **1,000+** | device shipments a month, with 30+ devices shipped daily |
-| 📈 **20%** | increase in per-technician ticket resolution through weekly coaching |
-| ⏱️ **50%** | shorter new-technician onboarding after the training system I built |
+| 📦 **1,000+** | device shipments a month, with biweekly cohorts of 100+ devices and users |
+| 🚚 **40%** | faster hardware fulfillment from the procurement order system I built |
+| 📈 **20%** | increase in team ticket closures through weekly one-on-ones |
 | 💰 **~20%** | cut in monthly wireless costs from a carrier usage audit at Puig |
 
 ## What I work with
 
 | Area | Tools |
 |---|---|
-| **Leadership & Operations** | Team management, hiring & coaching, vendor management, procurement & logistics, SLA/KPI reporting |
-| **ITSM & Documentation** | Zendesk (workflow & automation design), ServiceNow, Atera, Jira Service Desk, IT Glue |
-| **Microsoft & Endpoint** | Microsoft 365, Entra ID, Intune, Conditional Access, Exchange Online, Active Directory, Apple Business Manager, Google Workspace |
-| **Infrastructure & Automation** | VPN, firewalls, Azure Virtual Desktop, REST API integrations, C#/.NET |
+| **Microsoft 365** | Entra ID, Conditional Access, MFA, Intune, Exchange Online, SharePoint Online, Purview, Azure |
+| **IT Operations Platforms** | Zendesk, Atera, ServiceNow, IT Glue, Asset Panda, Apple Business Manager, VoIP (8x8, Grasshopper) |
+| **Networking & Security** | NOC/SOC alert triage, incident response, Cisco Meraki, firewalls, VPN |
+| **Languages & Frameworks** | C#/.NET, WPF, Python, Bash, PowerShell, HTML/CSS, JavaScript |
+| **APIs & Integrations** | REST APIs, Microsoft Graph, Zendesk API, Windows API, Firebase, Webhooks, Git/GitHub |
 
 ## Featured work
 
 - **Zendesk workflow redesign:** rebuilt automations, triggers, views, macros and forms from ticket and form-usage data to standardize support across the team.
-- **Integrations and automation:** connected Zendesk with FedEx, Asset Panda, Microsoft 365 and HR systems for automated shipping labels and onboarding/offboarding.
-- **Knowledge base migration:** moved the knowledge base off MyGlue with an API-driven migration.
+- **Procurement order system:** one entry completes the Zendesk ticket, generates FedEx/Shippo labels and updates Asset Panda and Intune, cutting hardware fulfillment time by 40%.
+- **SSG transition:** led a client's handoff from its previous MSP, then built automation for onboarding/offboarding and hardware tracking.
+- **Knowledge base migration:** moved the knowledge base from IT Glue into Zendesk Guide.
 - **Side projects:** an RFID access system, Raspberry Pi home security, a 3D-printed robot arm, 48 3D prints and FAA-certified drone photography.
 
 See all of it at **[rakibrary.com/projects](https://rakibrary.com/projects.html)**.
@@ -58,8 +60,8 @@ See all of it at **[rakibrary.com/projects](https://rakibrary.com/projects.html)
 - 🎓 **B.A. Urban Studies, Computer Science minor**, CUNY Queens College (2023)
 - ✅ Google IT Support Professional Certificate (2024)
 - ✅ Belkasoft Windows Digital Forensics (2025)
-- ⏳ CompTIA Network+ (expected January 2027)
-- ⏳ CompTIA Security+ (expected December 2027)
+- ⏳ CompTIA Security+ (expected January 2027)
+- ⏳ CompTIA Network+ (expected March 2027)
 
 ---
 

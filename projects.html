@@ -37,12 +37,88 @@
   </div>
   <div class="container page-hero">
       <p class="eyebrow light">Projects</p>
-      <h1>Operations, automation and hands-on builds, each with the problem, the approach and the result.</h1>
+      <h1>Automation tools, operations work and hands-on builds.</h1>
+      <p class="lead">Start with the code on GitHub, then see the operations projects and side builds behind it.</p>
   </div>
 </header>
 
 <main id="main">
-  <section class="container" style="padding-top: 64px">
+  <section class="container" id="github" style="padding-top: 64px">
+    <div class="section-head row" style="margin-bottom: 28px">
+      <div><p class="eyebrow">Open source · GitHub</p><h2>Tools I've built and shared</h2><p style="color: var(--muted)">Real problems from the help desk and the fleet, solved with code. Each one is documented on GitHub.</p></div>
+      <a class="btn btn-outline" href="https://github.com/RakibRary" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>All repositories</a>
+    </div>
+    <div class="repo-grid">
+      <article class="repo">
+        <div class="repo-term" aria-hidden="true"><span class="t-dim">E:\&gt;</span> go.cmd<br>Reading hardware hash… <span class="t-ok">done</span><br>Uploading to Intune via Graph… <span class="t-ok">done</span><br><span class="t-ok">✓ Import confirmed · shutting down</span></div>
+        <div class="repo-body">
+          <p class="repo-meta"><span class="lang-dot" style="background: #2b5797"></span>PowerShell<span class="repo-slug">intune-autopilot-usb-enrollment</span></p>
+          <h3>Autopilot Hash Upload (USB)</h3>
+          <p>300 new laptops needed Windows Autopilot registration. This toolkit registers each one from the Windows setup screen with a flash drive: no CSV import and no sign-in on the laptop.</p>
+          <ul class="repo-points"><li>Reads the serial and hardware hash, and keeps an offline CSV backup on the drive</li><li>Uploads the hash to Intune through Microsoft Graph using an Entra app registration</li><li>Waits for Intune to confirm the import, then shuts the laptop down</li></ul>
+          <ul class="chips"><li>PowerShell</li><li>Microsoft Graph</li><li>Intune</li><li>Autopilot</li><li>Entra ID</li></ul>
+          <a class="btn btn-dark repo-btn" href="https://github.com/RakibRary/intune-autopilot-usb-enrollment" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View code on GitHub</a>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="repo-term" aria-hidden="true"><span class="t-dim">ticket</span> ☑ Offboard to M365<br><span class="t-dim">→</span> Power Automate <span class="t-dim">→</span> runbook<br>block · shared mailbox · strip licenses<br><span class="t-ok">✓ Summary posted to ticket</span></div>
+        <div class="repo-body">
+          <p class="repo-meta"><span class="lang-dot" style="background: #0066ff"></span>Power Automate<span class="repo-slug">m365-offboarding-automation</span></p>
+          <h3>M365 Offboarding Automation</h3>
+          <p>Offboards a Microsoft 365 user end to end when an agent ticks one checkbox on a Zendesk ticket, instead of visiting several admin centers by hand.</p>
+          <ul class="repo-points"><li>Zendesk trigger → Power Automate → Azure Automation runbook</li><li>Blocks sign-in, converts the mailbox to shared, removes licenses and groups, then verifies its own work</li><li>Posts an audit summary back to the ticket, with no stored passwords or secrets (managed identity)</li></ul>
+          <ul class="chips"><li>Zendesk</li><li>Power Automate</li><li>Azure Automation</li><li>Exchange Online</li><li>Managed identity</li></ul>
+          <a class="btn btn-dark repo-btn" href="https://github.com/RakibRary/m365-offboarding-automation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View code on GitHub</a>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="repo-term" aria-hidden="true"><span class="t-dim">C:\&gt;</span> BreakFix.exe<br>BitLocker key backed up to Entra <span class="t-ok">✓</span><br>OneDrive Known Folder Move <span class="t-ok">✓</span><br><span class="t-ok">✓ READY TO WIPE</span></div>
+        <div class="repo-body">
+          <p class="repo-meta"><span class="lang-dot" style="background: #178600"></span>C#<span class="repo-slug">windows-device-reset-automation</span></p>
+          <h3>BreakFix Toolkit</h3>
+          <p>A portable, drop-and-run pre-wipe checker for Windows technicians. Remote onto a machine, run one EXE, and know exactly what is safe before you wipe it.</p>
+          <ul class="repo-points"><li>Checks disk health, BitLocker recovery-key backup, OneDrive, browsers, Outlook data, drives and printers</li><li>Produces a Migration_Report.html with a clear READY TO WIPE banner</li><li>Backs up bookmarks and a password-protected vault for Wi-Fi and BitLocker keys, then restores on the new PC</li></ul>
+          <ul class="chips"><li>C#</li><li>.NET</li><li>WPF</li><li>BitLocker</li><li>Atera</li></ul>
+          <a class="btn btn-dark repo-btn" href="https://github.com/RakibRary/windows-device-reset-automation" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View code on GitHub</a>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="repo-term" aria-hidden="true"><span class="t-dim">$</span> python zendesk_import_myglue.py<br>documents/ <span class="t-dim">→</span> Zendesk Guide<br>images + attachments uploaded <span class="t-ok">✓</span><br><span class="t-ok">✓ Articles created</span></div>
+        <div class="repo-body">
+          <p class="repo-meta"><span class="lang-dot" style="background: #3572A5"></span>Python<span class="repo-slug">myglue-to-zendesk</span></p>
+          <h3>myGlue → Zendesk Guide Importer</h3>
+          <p>myGlue has no API, so this migrates the knowledge base from the export download into Zendesk Guide articles.</p>
+          <ul class="repo-points"><li>Turns each exported myGlue document into a Zendesk article</li><li>Uploads inline images and attachments and rewrites the links</li><li>Optionally recreates folders as sections, imports archived docs as drafts, and has a one-document test mode</li></ul>
+          <ul class="chips"><li>Python</li><li>Zendesk API</li><li>IT Glue</li><li>Knowledge base</li></ul>
+          <a class="btn btn-dark repo-btn" href="https://github.com/RakibRary/myglue-to-zendesk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View code on GitHub</a>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="repo-term" aria-hidden="true"><span class="t-dim">&gt;</span> dism /Capture-Image … install.wim<br><span class="t-dim">&gt;</span> dism /Apply-Image … /Index:1<br>SetupComplete.cmd <span class="t-ok">✓</span><br><span class="t-ok">✓ PC-&lt;serial&gt; ready</span></div>
+        <div class="repo-body">
+          <p class="repo-meta"><span class="lang-dot" style="background: #a8b52a"></span>Batchfile<span class="repo-slug">dell-sysprep-deployment</span></p>
+          <h3>Windows 11 Golden Image (Dell)</h3>
+          <p>Build a sysprepped Windows 11 golden image on a reference Dell, capture it with DISM, and deploy it to a fleet of identical laptops from USB.</p>
+          <ul class="repo-points"><li>Step-by-step docs for build, capture, deploy and troubleshooting</li><li>unattend.xml skips OOBE and sets locale, time zone and local accounts</li><li>SetupComplete.cmd names each PC from its BIOS serial and applies power settings</li></ul>
+          <ul class="chips"><li>DISM</li><li>Sysprep</li><li>unattend.xml</li><li>Windows 11</li></ul>
+          <a class="btn btn-dark repo-btn" href="https://github.com/RakibRary/dell-sysprep-deployment" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View code on GitHub</a>
+        </div>
+      </article>
+      <article class="repo">
+        <div class="repo-term" aria-hidden="true"><span class="t-dim">robo ›</span> walk me through…<br>model: local <span class="t-dim">(Ollama)</span><br>network calls: <span class="t-ok">none</span><br><span class="t-ok">✓ Private by design</span></div>
+        <div class="repo-body">
+          <p class="repo-meta"><span class="lang-dot" style="background: #6b7280"></span>Side project<span class="repo-slug">robo-local-ai</span></p>
+          <h3>Robo: Local AI Assistant</h3>
+          <p>A private AI assistant that lives on your Mac as a floating robot face, powered by a local model through Ollama. Nothing leaves your machine.</p>
+          <ul class="repo-points"><li>Chat, screen vision and step-by-step "walk me through" help</li><li>Explains anything under your mouse with a hotkey</li><li>Built-in apps, including a dashboard, a workspace and coding agents</li></ul>
+          <ul class="chips"><li>Ollama</li><li>Local LLM</li><li>macOS</li></ul>
+          <a class="btn btn-dark repo-btn" href="https://github.com/RakibRary/robo-local-ai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>View code on GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" style="padding-top: 96px">
     <article class="feature">
       <div class="terminal feature-panel" aria-hidden="true">
         <span class="prompt">01</span> Analyze ticket + form usage<br>
@@ -78,34 +154,49 @@
       <h2 class="sub-head">Operations &amp; Automation</h2>
       <div class="grid grid-3" style="gap: 16px">
         <article class="card compact">
-          <span class="card-tag">Integration · APIs</span>
-          <h3 style="font-size: 19px">Zendesk, FedEx, Asset Panda &amp; M365 Integrations</h3>
-          <p>Automated shipping labels and onboarding/offboarding by connecting ticketing, shipping, asset and identity systems.</p>
+          <span class="card-tag">Procurement · Automation</span>
+          <h3 style="font-size: 19px">Procurement Order System (POS)</h3>
+          <p>One entry completes the Zendesk ticket, creates FedEx/Shippo labels and updates Asset Panda and Intune, replacing 4 systems of manual entry. Hardware fulfillment is 40% faster, with a full audit trail.</p>
         </article>
         <article class="card compact">
-          <span class="card-tag">Migration · APIs</span>
-          <h3 style="font-size: 19px">Knowledge Base Migration from MyGlue</h3>
-          <p>Moved the knowledge base off MyGlue with an API-driven migration instead of manual copy-paste.</p>
+          <span class="card-tag">Client transition</span>
+          <h3 style="font-size: 19px">SSG Transition from Previous MSP</h3>
+          <p>Managed the handoff and documentation, planned day-to-day operations and support processes, and drove continuous improvement after go-live.</p>
+        </article>
+        <article class="card compact">
+          <span class="card-tag">Zendesk · Integrations</span>
+          <h3 style="font-size: 19px">End-to-End Zendesk Platform</h3>
+          <p>From the end-user request portal to help-desk intake: forms, triggers, macros and automations, integrated with Intune, Entra ID and Asset Panda, plus SLA and performance reporting.</p>
         </article>
         <article class="card compact">
           <span class="card-tag">Logistics</span>
-          <h3 style="font-size: 19px">Seasonal Device Rollouts</h3>
-          <p>Biweekly rollouts of 100+ devices and users over three-month cycles, with a fulfillment team shipping 30+ devices a day.</p>
+          <h3 style="font-size: 19px">Seasonal Cohort Deployments</h3>
+          <p>Biweekly deployments of 100+ devices and users per wave, coordinated with Microsoft, Apple, Verizon and PC Connection.</p>
+        </article>
+        <article class="card compact">
+          <span class="card-tag">Migration · APIs</span>
+          <h3 style="font-size: 19px">IT Glue to Zendesk Knowledge Base</h3>
+          <p>Migrated the knowledge base from IT Glue into Zendesk Guide, alongside M365-to-Zendesk onboarding/offboarding and hardware tracking automation.</p>
+        </article>
+        <article class="card compact">
+          <span class="card-tag">AI · Infrastructure</span>
+          <h3 style="font-size: 19px">Self-Hosted AI Server</h3>
+          <p>Deployed a self-hosted AI model server so employees can use AI tools internally.</p>
         </article>
         <article class="card compact">
           <span class="card-tag">Training</span>
-          <h3 style="font-size: 19px">Technician Onboarding System</h3>
-          <p>Internal training and documentation that cut onboarding time in half and doubled new-hire productivity.</p>
+          <h3 style="font-size: 19px">Technician Training System</h3>
+          <p>An internal training system that streamlined onboarding and centralized technical documentation for more consistent troubleshooting.</p>
         </article>
         <article class="card compact">
           <span class="card-tag">Cost savings</span>
           <h3 style="font-size: 19px">Wireless Cost Audit at Puig</h3>
-          <p>Audited carrier usage reports and removed inactive and low-usage lines, cutting monthly wireless costs by nearly 20%.</p>
+          <p>Audited carrier accounts and removed inactive and low-usage lines, cutting monthly wireless costs by nearly 20%.</p>
         </article>
         <article class="card compact">
           <span class="card-tag">Retail tech</span>
           <h3 style="font-size: 19px">Xstore POS Rollout</h3>
-          <p>Configured and supported HP Engage, Verifone and Zebra hardware for retail locations with offshore teams.</p>
+          <p>Led retail store technology projects at Puig, coordinating offshore teams and configuring point-of-sale terminals and peripherals.</p>
         </article>
       </div>
     </div>
